@@ -3,7 +3,7 @@ import 'sign_up_page.dart';
 import 'splash_screen.dart';
 import 'package:flutter/material.dart';
 
-//Black People are Black because we are niggas
+//Sope why
 
 void main() {
   runApp(const MyApp());
