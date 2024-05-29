@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
- // Make sure to create and import your main page
-
-
+// Make sure to create and import your main page
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -23,17 +21,16 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Column(
-            children: [
-              Positioned.fill(
-                child: Image.asset(
-                  'assets/Splash.png',
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ],
+      body: Column(
+        children: [
+          Positioned.fill(
+            child: Image.asset(
+              'assets/Splash.png',
+              fit: BoxFit.cover,
+            ),
+          ),
+        ],
       ),
     );
- }
   }
-
+}
