@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:vintageapp/sign_up_page.dart';
+import 'package:vintageapp/onboarding/sign_up_page.dart';
 // Create a variable that stores the converted currency 
 // Create a function that multiplies the value given by the textfield
 // Store the variable that we created 

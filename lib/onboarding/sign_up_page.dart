@@ -1,23 +1,23 @@
 
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:vintageapp/forgot_password_page_one.dart';
-import 'package:vintageapp/sign_up_page.dart';
+import 'package:vintageapp/onboarding/login_in_page.dart';
 // Create a variable that stores the converted currency 
 // Create a function that multiplies the value given by the textfield
 // Store the variable that we created 
 // Display the variable
 
-class SignInMaterialPage extends StatefulWidget {
-  const SignInMaterialPage({super.key});
+class SecondPageMaterialPage extends StatefulWidget {
+  const SecondPageMaterialPage({super.key});
 
   @override
-  State<SignInMaterialPage>  createState()=> _SignInMaterialPageState(); 
+  State<SecondPageMaterialPage>  createState()=> _SecondPageMaterialPageState(); 
 }
-class _SignInMaterialPageState extends State<SignInMaterialPage> {
+class _SecondPageMaterialPageState extends State<SecondPageMaterialPage> {
 double result =0;
   final TextEditingController textEditingController = TextEditingController();
   void convert() {
@@ -66,7 +66,7 @@ double result =0;
           ),      
           ),
           const SizedBox(height: 50,),
-            Text('Hi,Welcome Back!'
+            Text('Create Account'
             ,
           style:  GoogleFonts.inter(
             fontSize: 20,
@@ -75,7 +75,7 @@ double result =0;
           ),      
             ),
             const SizedBox(height: 8,),
-            Text('Hope youre doing fine'
+            Text('We are here to help you!'
             ,
           style:  GoogleFonts.inter(
             fontSize: 17,
@@ -83,6 +83,27 @@ double result =0;
           ),      
             ),
             const SizedBox(height: 7,),
+          Padding(
+            padding: const EdgeInsets.all(14.0),
+            child: TextField(
+             style:  GoogleFonts.inter(
+                color: Colors.grey,
+                
+              ),
+              decoration:  InputDecoration(
+                hintText: 'Your name',
+                hintStyle: const TextStyle(
+                  color: Colors.black54
+                ),
+                prefixIcon: const Icon(Icons.person),
+                prefixIconColor: Colors.grey, 
+                filled: true,
+                fillColor: Colors.grey.shade100,
+                enabledBorder: border,
+              ),
+              keyboardType:   TextInputType.name
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.all(14.0),
             child: TextField(
@@ -124,7 +145,7 @@ double result =0;
        
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child: TextButton(onPressed:null,
+            child: TextButton(onPressed:convert,
             style: TextButton.styleFrom(
               backgroundColor: Colors.blueGrey.shade900,
               foregroundColor: Colors.white,
@@ -219,38 +240,18 @@ double result =0;
                )
                ),
              ),
-             const SizedBox(height: 8,),
-            RichText(
-             text: TextSpan(
-              children: [ TextSpan(
-                    text: 'Forgot Password?',
-                    style: const TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.w300,
-                    ),
-                    recognizer: TapGestureRecognizer()
-                    ..onTap = () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const ForgotPasswordMaterialPage()),
-                      );
-                    },
-                    )
-              ]
-             ),
-            ),
-            const SizedBox(height: 15,),
+             SizedBox(height: 15,),
              RichText(
               text: TextSpan(
                 children: [
                   const TextSpan(
-                   text: 'Don\'t have account?',
+                   text: 'Do have account?',
                    style: TextStyle(
                     color: Colors.grey
                    )
                   ),
                   TextSpan(
-                    text: 'Sign Up',
+                    text: 'Sign In',
                     style: const TextStyle(
                       color: Colors.blue,
                       fontWeight: FontWeight.w300,
@@ -259,7 +260,7 @@ double result =0;
                     ..onTap = () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const SecondPageMaterialPage()),
+                        MaterialPageRoute(builder: (context) => SignInMaterialPage()),
                       );
                     },
                     )
