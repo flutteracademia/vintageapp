@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:vintageapp/login_page_materialapp.dart';
 import 'sign_up_page.dart';
 import 'splash_screen.dart';
+import 'package:flutter/material.dart';
 
 //Black People are Black because we are niggas
 
