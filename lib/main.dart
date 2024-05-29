@@ -3,7 +3,7 @@ import 'package:vintageapp/onboarding/login_page_materialapp.dart';
 import 'onboarding/sign_up_page.dart';
 import 'onboarding/splash_screen.dart';
 
-//Black People are Black because we are niggas
+//Sope why
 
 void main() {
   runApp(const MyApp());
