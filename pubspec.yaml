@@ -61,9 +61,6 @@ flutter:
     - assets/Google - Original.svg
     - assets/_Facebook.svg
     - assets/Splash.png
-<<<<<<< Updated upstream
-
-=======
     - assets/doc_tor.png
     - assets/heart.png
     - assets/location.png
@@ -72,15 +69,14 @@ flutter:
     - assets/fourt_h.png
     - assets/fift_h.png
     - assets/profile.png
-    - assets/appointment.png
-    - assets/results.png
     - assets/home.png
     - assets/users.png
     - assets/medal.png
     - assets/star.png
+    - assets/appointment.png
+    - assets/results.png
 
-  
->>>>>>> Stashed changes
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
