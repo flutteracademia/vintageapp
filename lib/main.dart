@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white, // Set the background color to white
+      backgroundColor: Colors.white, 
       appBar: AppBar(
         title: const Text('All Doctors'),
       ),
@@ -101,8 +101,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.black, // Ensure selected item is visible
-        unselectedItemColor: Colors.grey, // Ensure unselected items are visible
+        selectedItemColor: Colors.black, 
+        unselectedItemColor: Colors.grey, 
         onTap: _onItemTapped,
       ),
     );
