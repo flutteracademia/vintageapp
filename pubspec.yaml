@@ -21,29 +21,24 @@ version: 1.0.0+1
 environment:
   sdk: '>=3.3.1 <4.0.0'
 
-# Dependencies specify other packages that your package needs in order to work.
-# To automatically upgrade your package dependencies to the latest versions
-# consider running `flutter pub upgrade --major-versions`. Alternatively,
-# dependencies can be manually updated by changing the version numbers below to
-# the latest version available on pub.dev. To see which dependencies have newer
-# versions available, run `flutter pub outdated`.
 dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^6.2.1
   flutter_svg: ^2.0.10
+  table_calendar: ^3.0.0
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^4.0.0
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^3.0.0
   carousel_slider: ^4.2.1
 
 # For information on the generic Dart part of this file, see the
@@ -59,6 +54,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+  assets:
     - assets/nurse.png
     - assets/doctor.png
     - assets/doctors.png
@@ -69,7 +65,20 @@ flutter:
     - assets/doc_tor.png
     - assets/heart.svg
     - assets/location.svg
-  
+    - assets/heart.png
+    - assets/location.png
+    - assets/thir_d.png
+    - assets/fourt_h.png
+    - assets/fift_h.png
+    - assets/profile.png
+    - assets/appointment.png
+    - assets/results.png
+    - assets/home.png
+    - assets/users.png
+    - assets/medal.png
+    - assets/star.png
+
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
