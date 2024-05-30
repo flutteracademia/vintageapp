@@ -66,6 +66,7 @@ flutter:
     - assets/Google - Original.svg
     - assets/_Facebook.svg
     - assets/Splash.png
+    - assets/carousel_image.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
