@@ -54,6 +54,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+  assets:
     - assets/nurse.png
     - assets/doctor.png
     - assets/doctors.png
@@ -62,19 +63,20 @@ flutter:
     - assets/_Facebook.svg
     - assets/Splash.png
     - assets/doc_tor.png
+    - assets/heart.svg
+    - assets/location.svg
     - assets/heart.png
     - assets/location.png
     - assets/thir_d.png
-    - assets/doctor.png
     - assets/fourt_h.png
     - assets/fift_h.png
     - assets/profile.png
+    - assets/appointment.png
+    - assets/results.png
     - assets/home.png
     - assets/users.png
     - assets/medal.png
     - assets/star.png
-    - assets/appointment.png
-    - assets/results.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
