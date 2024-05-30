@@ -144,14 +144,14 @@ class DoctorDetails extends StatelessWidget {
                           Text(
                             '$patients+',
                             style: const TextStyle(
-                              fontSize: 20, // Increased font size
-                              fontWeight: FontWeight.bold, // Made it bolder
+                              fontSize: 20, 
+                              fontWeight: FontWeight.bold, 
                             ),
                           ),
                           const Text(
                             'patients',
                             style: TextStyle(
-                              fontSize: 16, // Increased font size
+                              fontSize: 16, 
                             ),
                           ),
                         ],
@@ -164,14 +164,14 @@ class DoctorDetails extends StatelessWidget {
                           Text(
                             '$experience+',
                             style: const TextStyle(
-                              fontSize: 20, // Increased font size
-                              fontWeight: FontWeight.bold, // Made it bolder
+                              fontSize: 20, 
+                              fontWeight: FontWeight.bold, 
                             ),
                           ),
                           const Text(
                             'experience',
                             style: TextStyle(
-                              fontSize: 16, // Increased font size
+                              fontSize: 16, 
                             ),
                           ),
                         ],
@@ -183,14 +183,14 @@ class DoctorDetails extends StatelessWidget {
                           Text(
                             '$rating',
                             style: const TextStyle(
-                              fontSize: 20, // Increased font size
-                              fontWeight: FontWeight.bold, // Made it bolder
+                              fontSize: 20, 
+                              fontWeight: FontWeight.bold, 
                             ),
                           ),
                           const Text(
                             'rating',
                             style: TextStyle(
-                              fontSize: 16, // Increased font size
+                              fontSize: 16, 
                             ),
                           ),
                         ],
@@ -259,13 +259,13 @@ class DoctorDetails extends StatelessWidget {
               },
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(double.infinity, 60),
-                backgroundColor: const Color(0xFF1C2A3A), // Button color
+                backgroundColor: const Color(0xFF1C2A3A), 
               ),
               child: const Text(
                 'Book Appointment',
                 style: TextStyle(
-                  color: Colors.white, // Text color
-                  fontSize: 18, // Increase font size
+                  color: Colors.white, 
+                  fontSize: 18,
                 ),
               ),
             ),
