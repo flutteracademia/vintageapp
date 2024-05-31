@@ -22,12 +22,7 @@ class MyApp extends StatelessWidget {
       home: const SplashScreen(),
       routes: {
         '/main': (context) =>
-            ProfileCard(
-              name: 'Mosope Adegboyega' ,
-              title: 'Software Engineer',
-              description: 'Greatest Software Engineer',
-              imageUrl: 'assets/doctors.png',
-            ), // Define the route for the main page
+          Homepage() // Define the route for the main page
       },
     );
   }

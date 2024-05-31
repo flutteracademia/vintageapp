@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ProfileCard extends StatelessWidget {
   final String name;
@@ -7,7 +8,8 @@ class ProfileCard extends StatelessWidget {
   final String description;
   final String imageUrl;
 
-  const ProfileCard({super.key, 
+  const ProfileCard({
+    super.key, 
     required this.name,
     required this.title,
     required this.description,
@@ -16,50 +18,79 @@ class ProfileCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 50,
-      width: 50,
+    return SizedBox(
+      width: 110,
+      height: 180,
       child: Card(
-        elevation: 5,
+        color: Colors.white,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(8.0),
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              CircleAvatar(
-                radius: 50,
-                backgroundImage: NetworkImage(imageUrl),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.fromLTRB(25, 10, 0, 0),
+              child: ClipOval(
+                child: SvgPicture.asset(
+                  imageUrl,
+                  width: 80,
+                  height: 80,
+                  fit: BoxFit.cover,
+                ),
               ),
-              const SizedBox(height: 10),
-              Text(
+            ),
+            const SizedBox(height: 12),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(4, 0, 0, 0),
+              child: Text(
                 name,
-                style: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
+                textAlign: TextAlign.start,
+                style: GoogleFonts.inter(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.blueGrey.shade900,
                 ),
               ),
-              const SizedBox(height: 5),
-              Text(
+            ),
+            const SizedBox(height: 2),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(4, 0, 0, 0),
+              child: Text(
                 title,
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.grey[700],
+                style: GoogleFonts.inter(
+                  fontSize: 12,
+                  color: Colors.grey,
                 ),
               ),
-              const SizedBox(height: 10),
-              Text(
-                description,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.grey[600],
+            ),
+            const SizedBox(height: 12),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(4, 0, 6, 0),
+                  child: SvgPicture.asset(
+                    "assets/Group 14.svg",
+                    width: 10,
+                    height: 10,
+                  ),
                 ),
-                textAlign: TextAlign.center,
-              ),
-            ],
-          ),
+                Icon(
+                  Icons.location_on,
+                  color: Colors.grey,
+                  size: 15,
+                ),
+                SizedBox(width: 2),
+                Text(
+                  '800m away',
+                  style: GoogleFonts.inter(
+                    fontSize: 10.5,
+                    color: Colors.grey,
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
