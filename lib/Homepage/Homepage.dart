@@ -18,42 +18,13 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  final PageController _pageController = PageController();
-
-  final List<String> images = [
+ 
+ final List<String> images = [
     'assets/carousel_image.png',
     'assets/carousel_image.png',
     'assets/carousel_image.png',
   ];
 
-  final List<String> info = [
-    'Elevate the quality of care with comprehensive patient profiles, real-time health monitoring, and personalized treatment plans.',
-    'Connect and collaborate with a network of healthcare professionals to share insights, discuss cases, and streamline patient referrals.',
-    'Leverage cutting-edge tools for diagnosis, treatment planning, and patient engagement to stay ahead in the rapidly evolving healthcare landscape.',
-  ];
-
-  final List<String> titles = [
-    'Enhanced Patient Care',
-    'Collaborative Healthcare Network',
-    'Innovative Health Tools',
-  ];
-  final List<String> buttonText = [
-    'Next',
-    'Next',
-    'Continue',
-  ];
-
-  // Method for switching pages when the next button is pressed
-  void _nextPage() {
-    if (_currentPage < images.length - 1) {
-      _pageController.nextPage(
-        duration: const Duration(milliseconds: 200),
-        curve: Curves.easeIn,
-      );
-    } else {
-      // Do something when the last page is reached
-    }
-  }
 
   Widget buildDot(int index) {
     bool isActive = index == _currentPage;
