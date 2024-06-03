@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:vintageapp/Homepage/articles_page.dart';
 import 'package:vintageapp/onboarding/login_page_materialapp.dart';
 import 'onboarding/sign_up_page.dart';
 import 'onboarding/splash_screen.dart';
+import 'Widgets/profile_card_widget.dart';
+import 'Homepage/Homepage.dart';
 import 'doctor_panel/doctor_details.dart';
 import 'doctor_panel/doctor_panel.dart';
 
-//Sope why
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
@@ -50,9 +53,9 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  static const List<Widget> _widgetOptions = <Widget>[
-    Center(child: Text('Home Page')),
-    DoctorsList(),
+  static final List<Widget> _widgetOptions = <Widget>[
+    Center(child: Homepage()),
+    Center(child: Text('Results Page')), // Use Homepage here
     Center(child: Text('Results Page')),
     Center(child: Text('Profile Page')),
   ];
@@ -62,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: Colors.white, 
       appBar: AppBar(
-        title: const Text('All Doctors'),
+        title: const Text('Vintage Diagnostics'),
       ),
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
@@ -109,49 +112,49 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class DoctorsList extends StatelessWidget {
-  const DoctorsList({super.key});
+// class DoctorsList extends StatelessWidget {
+//   const DoctorsList({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      children: const [
-        DoctorPanel(
-          doctorName: 'Dr. David Patel',
-          specialization: 'Cardiologist',
-          location: 'Cardiology Center, USA',
-          email: 'doctor@gmail.com',
-          imagePath: 'assets/doc_tor.png',
-        ),
-        DoctorPanel(
-          doctorName: 'Dr. Jessica Turner',
-          specialization: 'Gynecologist',
-          location: "Women's Clinic, Seatle, USA",
-          email: 'doctor@gmail.com',
-          imagePath: 'assets/doctor.png',
-        ),
-        DoctorPanel(
-          doctorName: "Dr. Michael Johnson",
-          specialization: "Orthopedic Surgery",
-          location: "Maple Associates, NY, USA",
-          email: "doctor@gmail.com",
-          imagePath: 'assets/thir_d.png',
-        ),
-        DoctorPanel(
-          doctorName: "Dr. Emily Walker",
-          specialization: "Pediatrics",
-          location: "Serenity Pediatrics Clinic",
-          email: "doctor@gmail.com",
-          imagePath: 'assets/fourt_h.png',
-        ),
-        DoctorPanel(
-          doctorName: "Dr. Kim Smith",
-          specialization: "Neurologist",
-          location: "Stark TechGarden",
-          email: "doctor@gmail.com",
-          imagePath: 'assets/fift_h.png',
-        ),
-      ],
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return ListView(
+//       children: const [
+//         DoctorPanel(
+//           doctorName: 'Dr. David Patel',
+//           specialization: 'Cardiologist',
+//           location: 'Cardiology Center, USA',
+//           email: 'doctor@gmail.com',
+//           imagePath: 'assets/doc_tor.png',
+//         ),
+//         DoctorPanel(
+//           doctorName: 'Dr. Jessica Turner',
+//           specialization: 'Gynecologist',
+//           location: "Women's Clinic, Seatle, USA",
+//           email: 'doctor@gmail.com',
+//           imagePath: 'assets/doctor.png',
+//         ),
+//         DoctorPanel(
+//           doctorName: "Dr. Michael Johnson",
+//           specialization: "Orthopedic Surgery",
+//           location: "Maple Associates, NY, USA",
+//           email: "doctor@gmail.com",
+//           imagePath: 'assets/thir_d.png',
+//         ),
+//         DoctorPanel(
+//           doctorName: "Dr. Emily Walker",
+//           specialization: "Pediatrics",
+//           location: "Serenity Pediatrics Clinic",
+//           email: "doctor@gmail.com",
+//           imagePath: 'assets/fourt_h.png',
+//         ),
+//         DoctorPanel(
+//           doctorName: "Dr. Kim Smith",
+//           specialization: "Neurologist",
+//           location: "Stark TechGarden",
+//           email: "doctor@gmail.com",
+//           imagePath: 'assets/fift_h.png',
+//         ),
+//       ],
+//     );
+//   }
+// }

@@ -2,7 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:vintageapp/onboarding/forgot_password_page_one.dart';
 import 'sign_up_page.dart';
-import '../carousel.dart';
+import '/Widgets/carousel.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // Define _currentPage as a global variable
