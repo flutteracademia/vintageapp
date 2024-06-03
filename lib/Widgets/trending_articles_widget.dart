@@ -28,12 +28,15 @@ class ArticleWidget extends StatelessWidget {
       ),
       width: double.infinity,
     height: 100,
-    child: Flex(
+    child:  Flex(
       direction: Axis.horizontal,
       children: <Widget>[
-        SvgPicture.asset(imageUrl,
-        width: 100,
-        height: 100,),
+       ClipRRect(borderRadius:  BorderRadius.circular(5.0),
+          child: Image.asset(imageUrl,
+          width: 100,
+          height: 100,),
+        ),
+        SizedBox(width: 4,),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
            crossAxisAlignment: CrossAxisAlignment.start,
@@ -43,7 +46,7 @@ class ArticleWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SizedBox(
-                    width: 270,
+                    width: 250,
                     child: Text(title,
                     style: GoogleFonts.inter(
                        fontSize: 14,
@@ -55,7 +58,7 @@ class ArticleWidget extends StatelessWidget {
                   color: Colors.teal[900],)
                 ],
               ),
-              const SizedBox(height: 4,),
+              SizedBox(height: 4,),
               Row(
                 children: [
                   Text(
@@ -67,7 +70,7 @@ class ArticleWidget extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: 3,),
-                  const Icon(Icons.circle,color: Colors.grey,
+                  Icon(Icons.circle,color: Colors.grey,
                   size: 5,),
                   SizedBox(width: 3,),
                    Text(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vintageapp/Homepage/articles_page.dart';
 import 'package:vintageapp/onboarding/login_page_materialapp.dart';
 import 'onboarding/sign_up_page.dart';
 import 'onboarding/splash_screen.dart';
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
@@ -49,8 +51,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   static final List<Widget> _widgetOptions = <Widget>[
-    Center(child: Text('Tour Page')),
-    Center(child: Homepage()), // Use Homepage here
+    Center(child: Homepage()),
+    Center(child: Text('Results Page')), // Use Homepage here
     Center(child: Text('Results Page')),
     Center(child: Text('Profile Page')),
   ];

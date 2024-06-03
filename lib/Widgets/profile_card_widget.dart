@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+
 class ProfileCard extends StatelessWidget {
   final String name;
   final String title;
   final String description;
   final String imageUrl;
 
-  const ProfileCard({
-    super.key, 
+  const ProfileCard({super.key, 
     required this.name,
     required this.title,
     required this.description,
@@ -30,32 +30,28 @@ class ProfileCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.fromLTRB(25, 10, 0, 0),
-              child: ClipOval(
-                child: SvgPicture.asset(
-                  imageUrl,
-                  width: 80,
-                  height: 80,
-                  fit: BoxFit.cover,
-                ),
+              padding: const EdgeInsets.fromLTRB(25,10,0,0),
+              child: CircleAvatar(
+                radius: 40,
+              backgroundImage: NetworkImage(imageUrl),
               ),
             ),
             const SizedBox(height: 12),
             Padding(
-              padding: const EdgeInsets.fromLTRB(4, 0, 0, 0),
+              padding: const EdgeInsets.fromLTRB(4,0,0,0),
               child: Text(
                 name,
                 textAlign: TextAlign.start,
-                style: GoogleFonts.inter(
+                style:  GoogleFonts.inter(
                   fontSize: 14,
                   fontWeight: FontWeight.w600,
-                  color: Colors.blueGrey.shade900,
+                  color: Colors.blueGrey.shade900
                 ),
               ),
             ),
             const SizedBox(height: 2),
             Padding(
-              padding: const EdgeInsets.fromLTRB(4, 0, 0, 0),
+              padding: const EdgeInsets.fromLTRB(4,0,0,0),
               child: Text(
                 title,
                 style: GoogleFonts.inter(
@@ -64,32 +60,27 @@ class ProfileCard extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 12),
+             const SizedBox(height: 12),
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(4, 0, 6, 0),
-                  child: SvgPicture.asset(
-                    "assets/Group 14.svg",
-                    width: 10,
-                    height: 10,
+                  padding: const EdgeInsets.fromLTRB(4,0,6,0),
+                  child: SvgPicture.asset("assets/Group 14.svg",
+                  width: 10,
+                  height:10,
                   ),
                 ),
-                Icon(
-                  Icons.location_on,
+               Icon(Icons.location_on,
+               color: Colors.grey,
+               size: 15),
+                SizedBox(width: 2,),
+                Text('800m away',
+                style: GoogleFonts.inter(
+                  fontSize: 10.5,
                   color: Colors.grey,
-                  size: 15,
-                ),
-                SizedBox(width: 2),
-                Text(
-                  '800m away',
-                  style: GoogleFonts.inter(
-                    fontSize: 10.5,
-                    color: Colors.grey,
-                  ),
-                ),
+                ),)
               ],
-            ),
+            )
           ],
         ),
       ),

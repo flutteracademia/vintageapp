@@ -67,15 +67,17 @@ flutter:
     - assets/_Facebook.svg
     - assets/Splash.png
     - assets/carousel_image.png
-    - assets/Avatar.svg
-    - assets/Avatar-1.svg
-    - assets/Avatar-2.svg
     - assets/Group 14.svg
     - assets/Group 14-1.svg
     - assets/Group 14-2.svg
-    - assets/Mask group.svg
-    - assets/Mask group-1.svg
-    - assets/Mask group-2.svg
+    - assets/Mask group.png
+    - assets/Mask group-1.png
+    - assets/Mask group-2.png
+    - assets/home.png
+    - assets/appointment.png
+    - assets/profile.png
+    - assets/results.png
+    - assets/Rectangle 460.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

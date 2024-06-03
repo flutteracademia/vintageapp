@@ -1,8 +1,10 @@
 import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
 import "package:flutter/widgets.dart";
+import 'package:flutter_svg/flutter_svg.dart';
 import "package:google_fonts/google_fonts.dart";
 import 'package:carousel_slider/carousel_slider.dart';
+import "package:vintageapp/Homepage/articles_page.dart";
 import 'package:vintageapp/Widgets/profile_card_widget.dart';
 import 'package:flutter/gestures.dart';
 import "package:vintageapp/Widgets/trending_articles_widget.dart";
@@ -178,7 +180,7 @@ class _HomepageState extends State<Homepage> {
                             name: 'Dr. Marcus Horiz',
                             title: 'Cardiologist',
                             description: "I am him",
-                            imageUrl: 'assets/Avatar.svg',
+                            imageUrl: 'assets/Avatar-2.png',
                           ),
                         ),
                         SizedBox(width: 8,),
@@ -188,7 +190,7 @@ class _HomepageState extends State<Homepage> {
                             name: 'Dr Maria Elena',
                             title: 'Psychologist',
                             description: "I am him",
-                            imageUrl: 'assets/Avatar-1.svg',
+                            imageUrl: 'assets/Avatar-1.png',
                           ),
                         ),
                         SizedBox(width: 8,),
@@ -198,7 +200,7 @@ class _HomepageState extends State<Homepage> {
                             name: 'Dr. Stevi Jessi',
                             title: 'Orthopedist',
                             description: "I am him",
-                            imageUrl: 'assets/Avatar-2.svg',
+                            imageUrl: 'assets/Avatar.png',
                           ),
                         ),
                       ],
@@ -236,7 +238,7 @@ class _HomepageState extends State<Homepage> {
                                 ..onTap = () {
                                   Navigator.push(
                                     context,
-                                    MaterialPageRoute(builder: (context) => const Homepage()),
+                                    MaterialPageRoute(builder: (context) => const ArticlesPage()),
                                   );
                                 },
                             ),
@@ -249,14 +251,14 @@ class _HomepageState extends State<Homepage> {
                   const ArticleWidget(
                     title: 'The 25 Healthiest Fruits You Can Eat, According to a Nutritionist',
                     date: 'Jun 10, 2021 ',
-                    imageUrl: 'assets/Mask group.svg',
+                    imageUrl: 'assets/Mask group.png',
                     minsRead: '5 mins Read',
                   ),
                   const SizedBox(height: 5),
                   const ArticleWidget(
                     title: 'The 25 Healthiest Fruits You Can Eat, According to a Nutritionist',
                     date: 'Jun 10, 2021 ',
-                    imageUrl: 'assets/Mask group-1.svg',
+                    imageUrl: 'assets/Mask group-1.png',
                     minsRead: '5 mins Read',
                   ),
                 ],
