@@ -5,6 +5,9 @@ import 'onboarding/sign_up_page.dart';
 import 'onboarding/splash_screen.dart';
 import 'Widgets/profile_card_widget.dart';
 import 'Homepage/Homepage.dart';
+import 'doctor_panel/doctor_details.dart';
+import 'doctor_panel/doctor_panel.dart';
+
 
 void main() {
   runApp(const MyApp());
